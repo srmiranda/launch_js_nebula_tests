@@ -11,10 +11,12 @@ exports.objectsAnswers =  {
   },
 
   iterate : function(obj) {
-    // var array = []
-    // array.push(obj);
-    // for (var i = 0; i < array.length; i++){
-    //   return array[i];
-    // }
+    var new_array = [];
+    for (var key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      new_array.push(key + ": " + obj[key]);
+    }
+  }
+  return new_array;
   }
 };
